@@ -28,8 +28,8 @@ The application displays:
 ## Requirements
 
 - CMake 3.16+
-- C++17 compiler
-- OpenGL 3.2+ (automatically satisfied on modern systems)
+- C++17 compiler(or later)
+- OpenGL 3.2+
 
 ## Building
 
@@ -43,15 +43,6 @@ cmake --build build -j
 
 ```bash
 ./build/bs_pricer
-```
-
-## Project Structure
-
-```
-bs_pricer_cpp/
-├── CMakeLists.txt          # Build configuration with dependency management
-├── main.cpp                # Application entry point and UI logic
-└── black_scholes.hpp       # Black-Scholes pricing formulas
 ```
 
 ## Dependencies
@@ -83,10 +74,10 @@ All dependencies are automatically fetched via CMake:
 ## Platform Notes
 
 ### macOS
-The application uses OpenGL 3.2 Core Profile with forward compatibility, which is the correct configuration for macOS. Earlier versions (3.0/3.1) are not supported by Apple.
+I use OpenGL 3.2 Core Profile with forward compatibility, which is the correct configuration for macOS, otherwise it will not work.
 
 ### Linux/Windows
-The code automatically works on these platforms with OpenGL 3.2+.
+The code automatically works on these platforms with OpenGL 3.2+
 
 ## Implementation Details
 
@@ -103,7 +94,3 @@ You can easily extend the application to add:
 - Payoff diagrams
 - Export functionality (CSV, PNG)
 - Additional option types (American, Asian, etc.)
-
-## License
-
-MIT License - feel free to use and modify as needed.
